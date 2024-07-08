@@ -45,7 +45,7 @@ public:
 
     NetworkConnectionMonitor* createNetworkConnectionMonitor();
 
-signals:
+Q_SIGNALS:
     /** yay! internet has returned */
     void up( const QString& connectionName = "" );
     
@@ -56,7 +56,7 @@ signals:
     /** emitted after the above */
     void connectivityChanged( bool );
 
-private slots:
+private Q_SLOTS:
     void onFinished( QNetworkReply* reply );
     void onNetworkUp();
     void onNetworkDown();

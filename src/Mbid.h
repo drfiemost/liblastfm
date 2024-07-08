@@ -27,7 +27,7 @@ namespace lastfm
     class LASTFM_DLLEXPORT Mbid
     {
     public:
-        explicit Mbid( const QString& p = "" );
+        explicit Mbid( const QString& p = QStringLiteral("") );
         Mbid( const Mbid& that );
         ~Mbid();
 

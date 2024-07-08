@@ -37,7 +37,7 @@ class TestUrlBuilder : public QObject
 {
     Q_OBJECT
 
-private slots:
+private Q_SLOTS:
     void encode() /** @author <jono@last.fm> */
     {
         QFETCH( QString, input );
