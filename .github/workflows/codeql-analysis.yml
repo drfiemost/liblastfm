@@ -36,15 +36,15 @@ jobs:
 
     steps:
     - name: Install Qt
-      uses: jurplel/install-qt-action@v2
+      uses: jurplel/install-qt-action@v4
       with:
-        version: 6.2.4
+        version: 6.6.*
 
     - name: install_deps
       run: sudo apt-get install cmake libsamplerate0-dev libfftw3-dev
 
     - name: Checkout repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     # Initializes the CodeQL tools for scanning.
     - name: Initialize CodeQL

@@ -20,25 +20,25 @@ jobs:
 
     strategy:
       matrix:
-        qt-version: [5.15.2, 6.2.1]
+        qt-version: [5.15.*, 6.6.*]
 
     steps:
     - name: Install Qt
-      uses: jurplel/install-qt-action@v2
+      uses: jurplel/install-qt-action@v4
       with:
         version: ${{ matrix.qt-version }}
 
     - name: install_deps
       run: sudo apt-get install cmake libsamplerate0-dev libfftw3-dev
 
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
 
     - name: Configure CMake
       # Configure CMake in a 'build' subdirectory. `CMAKE_BUILD_TYPE` is only required if you are using a single-configuration generator such as make.
       # See https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html?highlight=cmake_build_type
       run: |
         PARAM=OFF
-        if [[ "${{ matrix.qt-version }}" == "5.15.2" ]]; then
+        if [[ "${{ matrix.qt-version }}" == "5.15.*" ]]; then
           PARAM=ON
         fi
         cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DBUILD_WITH_QT5=$PARAM
