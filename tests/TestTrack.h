@@ -26,7 +26,7 @@ class TestTrack : public QObject
         return t;
     }
     
-private slots:
+private Q_SLOTS:
     void testClone()
     {
         Track original = example();
