@@ -163,11 +163,11 @@ lastfm::CFStringToUtf8( CFStringRef s )
 #endif
 
 
-const char*
+QByteArray
 lastfm::platform()
 {
-    static QString platform = QSysInfo::prettyProductName();
-    return qPrintable(platform);
+    static const auto platform = QSysInfo::prettyProductName().toUtf8();
+    return platform;
 }
 
 QString lastfm::

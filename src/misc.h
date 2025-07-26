@@ -47,7 +47,7 @@ namespace lastfm
     LASTFM_DLLEXPORT CFStringRef QStringToCFString( const QString& );
     LASTFM_DLLEXPORT QString CFStringToQString( CFStringRef s );
 #endif
-    LASTFM_DLLEXPORT const char* platform();
+    LASTFM_DLLEXPORT QByteArray platform();
     LASTFM_DLLEXPORT QString md5( const QByteArray& src );
 }
 #endif //LASTFM_MISC_H
