@@ -21,7 +21,7 @@ public:
     MyCoreApp( int& argc, char** argv ) : QCoreApplication( argc, argv )
     {}
 
-public slots:
+public Q_SLOTS:
     void onStatus( int status )
     {
         qDebug() << lastfm::Audioscrobbler::Status(status);

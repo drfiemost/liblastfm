@@ -49,7 +49,7 @@ class LNetworkConnectionMonitor : public NetworkConnectionMonitor
 public:
     LNetworkConnectionMonitor( QObject* parent = 0 );
     ~LNetworkConnectionMonitor();
-private slots:
+private Q_SLOTS:
     void onStateChange( uint newState );
 private:
     QDBusInterface* m_nmInterface;

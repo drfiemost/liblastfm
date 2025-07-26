@@ -53,7 +53,7 @@ public:
 protected:
     virtual QNetworkReply* createRequest( Operation, const QNetworkRequest&, QIODevice* outgoingdata = 0 );
 
-private slots:
+private Q_SLOTS:
     void onConnectivityChanged( bool );
 
 private:

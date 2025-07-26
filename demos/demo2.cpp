@@ -20,7 +20,7 @@ public:
     MyCoreApp( int& argc, char**& argv ) : QCoreApplication( argc, argv )
     {}
     
-private slots:
+private Q_SLOTS:
     void onWsError( lastfm::ws::Error e )
     {
         // QNetworkReply will invoke this slot on application level errors

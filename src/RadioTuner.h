@@ -48,13 +48,13 @@ namespace lastfm
 
         void queueTrack( lastfm::Track& track );
 
-    signals:
+    Q_SIGNALS:
         void title( const QString& );
         void supportsDisco( bool supportsDisco );
         void trackAvailable();
         void error( lastfm::ws::Error, const QString& message );
 
-    private slots:
+    private Q_SLOTS:
         void onTuneReturn();
         void onGetPlaylistReturn();
         // no-op

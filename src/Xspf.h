@@ -40,10 +40,10 @@ namespace lastfm
 
         QList<Track> tracks() const;
 
-    signals:
+    Q_SIGNALS:
         Q_DECL_DEPRECATED void expired();
 
-    private slots:
+    private Q_SLOTS:
         Q_DECL_DEPRECATED void onExpired();
 
     private:

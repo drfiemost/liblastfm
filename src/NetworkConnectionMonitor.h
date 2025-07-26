@@ -35,7 +35,7 @@ public:
     ~NetworkConnectionMonitor();
     bool isConnected() const;
 
-signals:
+Q_SIGNALS:
     void networkUp();
     void networkDown();
 

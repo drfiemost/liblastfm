@@ -41,7 +41,7 @@ public:
         connect( reply, SIGNAL(finished()), SLOT(onGotSimilar()) );
     }
     
-private slots:
+private Q_SLOTS:
     void onGotSimilar()
     {
         QNetworkReply* r = static_cast<QNetworkReply*>(sender());

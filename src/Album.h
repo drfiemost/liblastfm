@@ -57,8 +57,8 @@ namespace lastfm
         bool isNull() const;
     
         /** Album.getInfo WebService */
-        QNetworkReply* getInfo( const QString& username = "" ) const;
-        QNetworkReply* share( const QStringList& recipients, const QString& message = "", bool isPublic = true ) const;
+        QNetworkReply* getInfo( const QString& username = QStringLiteral("") ) const;
+        QNetworkReply* share( const QStringList& recipients, const QString& message = QStringLiteral(""), bool isPublic = true ) const;
 
         /** use Tag::list to get the tag list out of the finished reply */
         QNetworkReply* getTags() const;

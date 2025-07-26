@@ -193,7 +193,7 @@ public:
 //////////// lastfm::Ws
     
     /** See last.fm/api Track section */
-    QNetworkReply* share( const QStringList& recipients, const QString& message = "", bool isPublic = true ) const;
+    QNetworkReply* share( const QStringList& recipients, const QString& message = QStringLiteral(""), bool isPublic = true ) const;
 
     QNetworkReply* getSimilar( int limit = -1 ) const;
     /** The match percentage is returned from last.fm as a 4 significant
@@ -211,7 +211,7 @@ public:
     /** method should be a method name of reciever that takes a QByteArray
     If that fails it will try invoking method with no arguments.
     */
-    void getInfo( QObject* receiver, const char * method, const QString& username = "" ) const;
+    void getInfo( QObject* receiver, const char * method, const QString& username = QStringLiteral("") ) const;
     QNetworkReply* getBuyLinks( const QString& country ) const;
 
     static QNetworkReply* playlinks( const QList<Track>& tracks );

@@ -39,7 +39,7 @@ class MNetworkConnectionMonitor : public NetworkConnectionMonitor
 public:
     MNetworkConnectionMonitor( QObject* parent = 0 );
     ~MNetworkConnectionMonitor();
-private slots:
+private Q_SLOTS:
 
 private:
 #ifdef Q_OS_MAC

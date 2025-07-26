@@ -112,12 +112,12 @@ public:
     void forceScrobbleStatusChanged();
     void forceCorrected( QString correction );
 
-private slots:
+private Q_SLOTS:
     void onLoveFinished();
     void onUnloveFinished();
     void onGotInfo();
 
-signals:
+Q_SIGNALS:
     void loveToggled( bool love );
     void scrobbleStatusChanged( short scrobbleStatus );
     void corrected( QString correction );

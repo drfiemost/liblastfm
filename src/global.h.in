@@ -62,7 +62,7 @@ namespace lastfm
         for (int i=0; i < meta.enumeratorCount(); ++i)
         {
             QMetaEnum m = meta.enumerator(i);
-            if (m.name() == QLatin1String(enum_name))
+            if (QLatin1String(m.name()) == QLatin1String(enum_name))
                 return QLatin1String(m.valueToKey(enum_value));
         }
         return QString("Unknown enum value for \"%1\": %2").arg( enum_name ).arg( enum_value );

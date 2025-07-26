@@ -65,7 +65,7 @@ class lastfm::RadioTunerPrivate : public QObject
           */
         void fetchFiveMoreTracks();
 
-    private slots:
+    private Q_SLOTS:
         void onTwoSecondTimeout();
 };
 
