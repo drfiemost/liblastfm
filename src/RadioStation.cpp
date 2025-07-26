@@ -58,7 +58,7 @@ lastfm::RadioStation::RadioStation( const QString& s )
 
         if ( index != -1 )
         {
-            d->m_tagFilter = tempString.mid( index + 5, tempString.count() - (index + 5) );
+            d->m_tagFilter = tempString.mid( index + 5, tempString.length() - (index + 5) );
             tempString = tempString.mid( 0, index );
         }
     }

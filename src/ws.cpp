@@ -264,7 +264,11 @@ static QDateTime QByteArrayToHttpDate(const QByteArray &value)
     }
 
     if (dt.isValid())
+#if QT_VERSION >= 0x050200
+        dt.setTimeZone(QTimeZone::utc());
+#else
         dt.setTimeSpec(Qt::UTC);
+#endif
     return dt;
 }
 
