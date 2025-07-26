@@ -31,6 +31,9 @@
 #include <QThread>
 #include <QMutex>
 #include <QSslSocket>
+#if QT_VERSION >= 0x050200
+#  include <QTimeZone>
+#endif
 
 static lastfm::ws::Scheme theScheme = lastfm::ws::Https;
 static QString theHost = LASTFM_WS_HOSTNAME;
